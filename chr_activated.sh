@@ -534,17 +534,7 @@ else
 fi
 msg_ok "Using ${CL}${BL}$STORAGE${CL} ${GN}for Storage Location."
 msg_ok "Virtual Machine ID is ${CL}${BL}$VMID${CL}."
-msg_info "Getting URL for Latest Mikrotik RouterOS CHR Disk Image"
-
-MIK_VER=$(get_mikrotik_version s)
-
-if [ -n "$MIK_VER" ]; then
-  msg_ok "Latest stable version: ${CL}${BL}$MIK_VER${CL}."
-else
-  msg_error "Could not get latest version"
-  msg_ok "Defaulting to version 7.20"
-  MIK_VER="7.20"
-fi
+msg_info "Using selected Mikrotik RouterOS CHR Disk Image URL"
 
 URL="https://github.com/elseif/MikroTikPatch/releases/download/7.20.8/chr-7.20.8.img.zip"
 
